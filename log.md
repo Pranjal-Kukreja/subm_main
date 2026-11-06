@@ -822,3 +822,17 @@ Newest entries at the bottom. Commands are run from the repo root.
 - The mini-PS repo still ignores /Research/ and was not touched; the mini-PS changes remain uncommitted.
 - Note: Research/experiments imports the mini-PS `buddy` package, so it runs only from inside the mini-PS folder
   (the README says so).
+
+## 2026-11-06: Chat buddy and the rest pushed to the main repo
+
+- Checks before committing: 161 mini-PS tests pass; .env, .claude, data/cache, data/logs, data/profile, Research/
+  and the root PDFs are ignored; the key scan matched only the known fakes (tests/test_chat.py and log.md quote
+  api_key="not-a-real-key" and sk-SECRET-123); no file over 5 MB.
+- Commits (Pranjal-Kukreja, no co-author lines):
+  - 6a17ccf skills step, model switches and earlier_core (KB builder);
+  - 9c4aca4 profile, skip, checks, context, planner, rules;
+  - 0a8cc9d chat buddy (router, intake, choose, revise, answer, CLI);
+  - 3e07a66 demo script and transcript;
+  - da358f9 agent log.
+- Pushed with a normal push (498e785..da358f9). chat.py, test.py and git_organisation_link.txt were left
+  untracked, as before.
